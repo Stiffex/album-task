@@ -1,0 +1,46 @@
+.app {
+    width: 1100px;
+    margin: auto;
+    display: flex;
+}
+
+.albums {
+    width: 300px;
+}
+
+.albums ul, .photos ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.albums ul li {
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+
+    border-bottom: 1px solid rgb(15, 151, 162);
+}
+
+.albums ul li:hover {
+    background-color: aliceblue;
+}
+
+.album-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: cadetblue;
+}
+
+.photos {
+    margin-left: 10px;
+    display: inline-flex;
+}
+
+.no-user-selected {
+    font-size: 1.25em;
+    color: #1ebc04;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
