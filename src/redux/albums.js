@@ -1,13 +1,11 @@
 const initialState = {
     selectedAlbumId: null,
     albums: [],
-    photos: [],
 
     loadingAlbums: false,
-    loadingPhotos: false
 }
 
-export const reducer = (state = initialState, action) => {
+export const albums = (state = initialState, action) => {
     switch(action.type) {
 
         case 'albums/load/start' :
@@ -28,22 +26,6 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 selectedAlbumId: action.payload
             }
-
-        case 'photos/load/start' :
-            return {
-                ...state,
-                loadingPhotos: true
-            }
-
-        case 'photos/load/success' :
-            return {
-                ...state,
-                photos: action.payload,
-                loadingPhotos: false
-            }
-
-
-
         default:
             return state;
     }

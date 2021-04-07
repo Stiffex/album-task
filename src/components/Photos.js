@@ -3,8 +3,8 @@ import {useSelector} from "react-redux";
 import Photo from "./Photo";
 
 function Photos(props) {
-    const photos = useSelector(state => state.photos);
-    const selectedAlbumId = useSelector(state => state.selectedAlbumId);
+    const photos = useSelector(state => state.photos.photos);
+    const selectedAlbumId = useSelector(state => state.albums.selectedAlbumId);
 
     const filtredPhotos = photos.filter((photo) => {
         if(photo.albumId === selectedAlbumId) {
